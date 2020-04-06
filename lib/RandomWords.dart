@@ -12,24 +12,35 @@ class RandomWordsState extends State<RandomWords> {
   }
   Widget _buildRow(WordPair pair) {
     final bool alreadySaved = _saved.contains(pair);
-    return ListTile(
-      title: Text(
-        pair.asPascalCase,
-        style: _biggerFont,
-      ),
-      trailing: Icon(
-        alreadySaved ? Icons.favorite : Icons.favorite_border,
-        color: alreadySaved ? Colors.deepOrange : null,
-      ),
-      onTap: () {
-        setState(() {
-          if (alreadySaved){
-            _saved.remove(pair);
-          } else {
-            _saved.add(pair);
-          }
-        });
-      },
+    return Row(
+      children: <Widget>[
+        Expanded(
+          child: ListTile(
+            title: Text(
+              pair.asPascalCase,
+              style: _biggerFont,
+            ),
+            onTap: _pushSaved,
+          )
+        ),
+        Expanded(
+          child: IconButton(
+            onPressed: () {
+              setState(() {
+                if (alreadySaved){
+                  _saved.remove(pair);
+                } else {
+                  _saved.add(pair);
+                }
+              });
+            },
+            icon: Icon(
+              alreadySaved ? Icons.favorite : Icons.favorite_border,
+              color: alreadySaved ? Colors.deepOrange : null,
+            ),
+          )
+        )
+      ],
     );
   }
   Widget _buildSuggestions() {
