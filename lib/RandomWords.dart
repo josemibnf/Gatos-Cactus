@@ -89,5 +89,5 @@ class RandomWordsState extends State<RandomWords> {
 }
 
 class RandomWords extends StatefulWidget{
-  RandomWordsState createState() => RandomWordsState();
+  RandomWordsState get createState => RandomWordsState();
 }

@@ -7,7 +7,7 @@ void main() => runApp(MaterialApp(home: BottomNavBar()));
 
 class BottomNavBar extends StatefulWidget {
   @override
-  _BottomNavBarState createState() => _BottomNavBarState();
+  _BottomNavBarState get createState => _BottomNavBarState();
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {

@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class WhatIsIt extends StatefulWidget{
-  Future<WhatIsItState> createState() async => WhatIsItState();
+class WhatIsItState extends State<WhatIsIt> {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
   }
-  
-  class WhatIsItState {
+
+}
+
+class WhatIsIt extends StatefulWidget{
+  WhatIsItState get createState => WhatIsItState();
 }
