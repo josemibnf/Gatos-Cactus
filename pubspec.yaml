@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  tflite:
   flutter:
     sdk: flutter
   english_words: ^3.1.0
@@ -71,3 +72,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  assets:
+    - assets/labels.txt
+    - assets/model.tflite
