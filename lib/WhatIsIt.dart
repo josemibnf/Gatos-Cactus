@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'dart:async';
 import 'camera.dart';
+import 'render.dart';
 import 'package:flutter/material.dart';
 import 'package:tflite/tflite.dart';
 
